@@ -16,7 +16,7 @@ export default function BlogPost({ children, meta}) {
 
             {/*<HeadPost meta={meta} isBlogPost/>*/}
             <article>
-                <Card variant="outlined">
+                <Card variant="outlined" style={{width: 640}}>
                     <CardHeader
                         title={meta.title}
                         subheader={meta.date + ' ☕ ' + meta.readTime + ' min read'}
