@@ -2,7 +2,7 @@ import Link from 'next/link'
 import {HeadPost} from './HeadPost'
 import {Button, Typography} from "@material-ui/core";
 
-export const Post = ({ post }) => {
+export const Summary = ({ post }) => {
     const {
         link,
         module: { meta },

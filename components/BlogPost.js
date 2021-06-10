@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {HeadPost} from './HeadPost'
-import {Breadcrumbs, Typography} from "@material-ui/core";
+import {Breadcrumbs, Card, CardContent, CardHeader, Typography} from "@material-ui/core";
 
 export default function BlogPost({ children, meta}) {
     return (
@@ -9,14 +9,24 @@ export default function BlogPost({ children, meta}) {
                 <Link color="textPrimary" href="/">
                     Home
                 </Link>
-                <Typography color="textPrimary">Breadcrumb</Typography>
+                <Link color="textPrimary" href="#">
+                    {meta.title}
+                </Link>
             </Breadcrumbs>
 
-            <HeadPost meta={meta} isBlogPost/>
+            {/*<HeadPost meta={meta} isBlogPost/>*/}
             <article>
-                <Typography>
-                    {children}
-                </Typography>
+                <Card variant="outlined">
+                    <CardHeader
+                        title={meta.title}
+                        subheader={meta.date + ' ☕ ' + meta.readTime + ' min read'}
+                    />
+                    <CardContent>
+                        <Typography>
+                            {children}
+                        </Typography>
+                    </CardContent>
+                </Card>
             </article>
         </>
     )
