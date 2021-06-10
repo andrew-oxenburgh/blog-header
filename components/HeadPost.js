@@ -1,5 +1,7 @@
+import {Typography} from "@material-ui/core";
+
 export const HeadPost = ({meta, isBlogPost}) => (
-    <>
+    <Typography>
         <h1 className={isBlogPost ? 'great-title' : null}>{meta.title}</h1>
         <div className='details'>
             {
@@ -10,5 +12,5 @@ export const HeadPost = ({meta, isBlogPost}) => (
         ☕ {meta.readTime + ' min read'}
       </span>
         </div>
-    </>
+    </Typography>
 )

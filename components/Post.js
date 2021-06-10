@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { HeadPost } from './HeadPost'
+import {HeadPost} from './HeadPost'
+import {Button, Typography} from "@material-ui/core";
 
 export const Post = ({ post }) => {
     const {
@@ -9,10 +10,12 @@ export const Post = ({ post }) => {
 
     return (
         <article>
-            <HeadPost meta={meta} />
-            <Link href={'/blog' + link}>
-                <a>Read more →</a>
-            </Link>
+            <Typography>
+                <HeadPost meta={meta}/>
+                <Link href={'/blog' + link}>
+                    <Button color="inherit">Read more →</Button>
+                </Link>
+            </Typography>
         </article>
     )
 }
