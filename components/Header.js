@@ -1,9 +1,10 @@
 import Link from "next/link";
+import BlogTitle from "./BlogTitle";
 
 export default function Header() {
     return (
         <nav>
-            <h1>Andrew Oxenburgh</h1>
+            <BlogTitle>Andrew Oxenburgh</BlogTitle>
             <div>
                 <Link href="/">
                     <a>Blog</a>
