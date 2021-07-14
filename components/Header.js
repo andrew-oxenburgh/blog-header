@@ -8,9 +8,11 @@ export default function Header() {
                 <IconButton edge="start" color="inherit" aria-label="menu">
                     {/*<MenuIcon />*/}
                 </IconButton>
-                <Typography variant="h6">
-                    Andrew Oxenburgh's Blog
-                </Typography>
+                <Link href="..">
+                    <Typography variant="h6">
+                        Andrew Oxenburgh's Blog
+                    </Typography>
+                </Link>
                 <Link href="/">
                     <Button color="inherit">Home</Button>
                 </Link>
@@ -19,6 +21,9 @@ export default function Header() {
                 </Link>
                 <Link href="/about">
                     <Button color="inherit">About</Button>
+                </Link>
+                <Link href="/components">
+                    <Button color="inherit">Components</Button>
                 </Link>
             </Toolbar>
         </AppBar>
